@@ -1,29 +1,25 @@
 package menu;
 
-import games.GameLoader;
-import lombok.Getter;
+import games.colombianGame.ColombianGameMenu;
+import games.mexicanGame.MexicanGameMenu;
+import games.spanishGame.SpanishGameMenu;
 import utils.Text;
 
 import java.util.Scanner;
 
 public class MainMenu {
     private static final Scanner scanner = new Scanner(System.in);
-    @Getter private static String gameType;
-
-    public void principal() {
-        Text.textPrincipal();
+    public static void principal() {
+        Text.principal();
         switch (scanner.nextInt()) {
             case 1 -> {
-                gameType = "SPANISH";
-                break;
+                SpanishGameMenu.main();
             }
             case 2 -> {
-                gameType = "COLOMBIAN";
-                break;
+                MexicanGameMenu.main();
             }
             case 3 -> {
-                gameType = "MEXICAN";
-                break;
+                ColombianGameMenu.main();
             }
         }
 

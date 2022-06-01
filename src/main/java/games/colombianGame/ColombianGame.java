@@ -1,8 +1,9 @@
-package games.all_games;
+package games.colombianGame;
 
 import games.GameInterface;
 
-public class SpanishGame implements GameInterface {
+public class ColombianGame implements GameInterface {
+
     @Override
     public void startGame() {
 
@@ -27,4 +28,5 @@ public class SpanishGame implements GameInterface {
     public void displayGameResult() {
 
     }
+
 }

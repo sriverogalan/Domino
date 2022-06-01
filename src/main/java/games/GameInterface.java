@@ -1,6 +1,9 @@
 package games;
 
 public interface GameInterface {
-    void startGame();
-
+    public void startGame();
+    public void endGame();
+    public void playGame();
+    public void displayGame();
+    public void displayGameResult();
 }
