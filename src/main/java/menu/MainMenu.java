@@ -13,7 +13,7 @@ public class MainMenu {
         Text.principal();
         switch (scanner.nextInt()) {
             case 1 -> {
-                SpanishGameMenu.main();
+                SpanishGameMenu.play();
             }
             case 2 -> {
                 MexicanGameMenu.main();
@@ -22,6 +22,5 @@ public class MainMenu {
                 ColombianGameMenu.main();
             }
         }
-
     }
 }

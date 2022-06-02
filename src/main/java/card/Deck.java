@@ -15,6 +15,6 @@ public class Deck {
                 cards.add(new Card(i, j));
             }
         }
+        Collections.shuffle(cards);
     }
-
 }
