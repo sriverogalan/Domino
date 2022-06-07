@@ -1,9 +1,13 @@
 package games;
 
+import card.Card;
+
 public interface GameInterface {
-    public void startGame();
-    public void endGame();
-    public void playGame();
-    public void displayGame();
-    public void displayGameResult();
+    void startGame();
+    void endGame();
+    void playGame();
+    void displayGame();
+    void displayGameResult();
+    void playCardLeftBoard(Card card);
+    void playCardRightBoard(Card card);
 }

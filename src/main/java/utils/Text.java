@@ -32,4 +32,20 @@ public class Text {
         System.out.println("6. 4 jugadores con CPU");
     }
 
+    // chooseWhatYouWantToDo
+    public static void chooseWhatYouWantToDo() {
+        System.out.println("¿Qué quieres hacer?");
+        System.out.println("1. Tirar una carta");
+        System.out.println("2. Coger una carta");
+    }
+
+    public static void wrongInput() {
+        System.out.println(Colors.RED + "¡Error! Introduce un número válido" + Colors.RESET);
+    }
+
+    // playCard
+    public static void playCard() {
+        System.out.println("¿Qué carta quieres tirar?");
+    }
+
 }

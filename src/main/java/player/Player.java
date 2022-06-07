@@ -11,9 +11,8 @@ public class Player {
     private int id;
     private String name;
     private String color;
-    private List<Card> hand = new ArrayList<>();
+    @Getter private List<Card> hand = new ArrayList<>();
     private int points = 0;
-    private int turn;
     private boolean isCPU;
 
     public Player(String name, String color, boolean isCPU) {
@@ -37,17 +36,23 @@ public class Player {
     public void resetPoints() {
         this.points = 0;
     }
+    public boolean isEmptyHand() {
+        return hand.isEmpty();
+    }
+    public void displayHand() {
+        int counter = 0;
+        for (Card card : hand) {
+            System.out.print(counter++ + ". " + card.toString()+ " ");
+        }
+    }
     public void resetHand() {
         hand.clear();
     }
-
-    public void reset() {
+    public void resetStats() {
         resetPoints();
         resetHand();
     }
-
     public String getInitial(){
         return name.substring(0,1);
     }
-
 }
