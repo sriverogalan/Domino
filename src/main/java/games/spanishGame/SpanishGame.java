@@ -27,7 +27,6 @@ public class SpanishGame implements GameInterface {
                     displayGame();
                     player.displayHand();
                     SpanishGameMenu.chooseWhatYouWantToDo(player);
-
                 }
                 if (player.isEmptyHand()){
                     isWin = true;

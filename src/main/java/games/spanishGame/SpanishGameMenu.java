@@ -20,36 +20,6 @@ public class SpanishGameMenu {
         game.startGame();
     }
 
-    public static void chooseWhatYouWantToDo(Player player) {
-        Text.chooseWhatYouWantToDo();
-        switch (scanner.nextInt()) {
-            case 1 -> playCard(player);
-            case 2 -> takeCard(player);
-            default -> {
-                Text.wrongInput();
-                chooseWhatYouWantToDo(player);
-            }
-        }
-    }
-
-    public static void playCard(Player player) {
-        Text.playCard();
-        Card card = player.getHand().get(scanner.nextInt() - 1);
-        Text.chooseLeftOrRight(card);
-        int choice = scanner.nextInt();
-        switch (choice) {
-            case 1 -> {
-                game.playCardLeftBoard(card);
-            }
-            case 2 -> {
-                game.playCardRightBoard(card);
-            }
-            default -> {
-                Text.wrongInput();
-                playCard(player);
-            }
-        }
-    } 
     public static void chooseMode() {
         Text.startSpanishGame();
         switch (scanner.nextInt()) {
@@ -62,6 +32,34 @@ public class SpanishGameMenu {
             default -> {
                 System.out.println("ERROR : Número no válido");
                 chooseMode();
+            }
+        }
+    }
+    public static void chooseWhatYouWantToDo(Player player) {
+        Text.chooseWhatYouWantToDo();
+        switch (scanner.nextInt()) {
+            case 1 -> playCard(player);
+            default -> {
+                Text.wrongInput();
+                chooseWhatYouWantToDo(player);
+            }
+        }
+    }
+
+    public static void playCard(Player player) {
+        Text.playCard();
+        Card card = player.getHand().get(scanner.nextInt() - 1);
+        Text.chooseLeftOrRight(card); // Left or Right
+        switch (scanner.nextInt()) {
+            case 1 -> {
+                game.playCardLeftBoard(card);
+            }
+            case 2 -> {
+                game.playCardRightBoard(card);
+            }
+            default -> {
+                Text.wrongInput();
+                playCard(player);
             }
         }
     }

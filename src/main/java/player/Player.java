@@ -27,15 +27,6 @@ public class Player {
     public void removeCard(Card card) {
         hand.remove(card);
     }
-    public void addPoints(int points) {
-        this.points += points;
-    }
-    public void removePoints(int points) {
-        this.points -= points;
-    }
-    public void resetPoints() {
-        this.points = 0;
-    }
     public boolean isEmptyHand() {
         return hand.isEmpty();
     }
