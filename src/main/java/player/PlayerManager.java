@@ -29,15 +29,9 @@ public class PlayerManager {
         return null;
     }
 
-    public static void resetPlayerStats() {
-        for (Player player : players) {
-            player.resetStats();
-        }
-    }
-
     public static Player isCPU() {
         for (Player player : players) {
-            if (player.isCPU()) {
+            if (player.isBOT()) {
                 return player;
             }
         }

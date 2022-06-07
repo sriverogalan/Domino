@@ -10,11 +10,18 @@ import java.util.*;
 public class Deck {
     private List<Card> cards = new ArrayList<>();
     public Deck() {
-        for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 7; j++) {
-                cards.add(new Card(i, j));
+        int counter = 0;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (j >= counter){
+                    cards.add(new Card(i, j));
+                }
             }
+            counter++;
         }
         Collections.shuffle(cards);
     }
+
+
+
 }
