@@ -1,5 +1,6 @@
 package utils;
 
+import card.Card;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
@@ -42,8 +43,12 @@ public class Text {
     public static void wrongInput() {
         System.out.println(Colors.RED + "¡Error! Introduce un número válido" + Colors.RESET);
     }
+    public static void chooseLeftOrRight(Card card) {
+        System.out.println("¿A dónde quieres tirar la carta " + card.toString() + "?");
+        System.out.println("1. A la izquierda");
+        System.out.println("2. A la derecha");
+    }
 
-    // playCard
     public static void playCard() {
         System.out.println("¿Qué carta quieres tirar?");
     }

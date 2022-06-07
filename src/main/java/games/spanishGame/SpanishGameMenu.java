@@ -23,15 +23,12 @@ public class SpanishGameMenu {
     public static void chooseWhatYouWantToDo(Player player) {
         Text.chooseWhatYouWantToDo();
         switch (scanner.nextInt()) {
-            case 1:
-                playCard(player);
-                break;
-            case 2:
-                takeCard(player);
-                break;
-            default:
+            case 1 -> playCard(player);
+            case 2 -> takeCard(player);
+            default -> {
                 Text.wrongInput();
                 chooseWhatYouWantToDo(player);
+            }
         }
     }
 
@@ -41,17 +38,16 @@ public class SpanishGameMenu {
         Text.chooseLeftOrRight(card);
         int choice = scanner.nextInt();
         switch (choice) {
-            case 1: {
+            case 1 -> {
                 game.playCardLeftBoard(card);
-                break;
             }
-            case 2: {
+            case 2 -> {
                 game.playCardRightBoard(card);
-                break;
             }
-            default:
+            default -> {
                 Text.wrongInput();
                 playCard(player);
+            }
         }
     } 
     public static void chooseMode() {

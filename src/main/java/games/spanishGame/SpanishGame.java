@@ -3,15 +3,16 @@ package games.spanishGame;
 import card.Card;
 import card.Deck;
 import games.GameInterface;
+import lombok.*;
 import player.Player;
 import player.PlayerManager;
 
 import java.util.*;
-
+@Getter @Setter
 public class SpanishGame implements GameInterface {
     private Deck deck = new Deck();
     private List<Card> deckCards = deck.getCards();
-    private List<Card> cardsPlayed = new ArrayList<>();
+    @Getter public List<Card> cardsPlayed = new ArrayList<>();
     private Random random = new Random();
     private boolean isWin = false;
 
@@ -61,7 +62,15 @@ public class SpanishGame implements GameInterface {
 
     @Override
     public void playCardLeftBoard(Card card) {
-        cardsPlayed.add(0,card);
+        if (cardsPlayed.size() == 0){
+            cardsPlayed.add(card);
+        } else {
+            if (card.getY() == cardsPlayed.get(0).getX()) {
+                cardsPlayed.add(0,card);
+            } else {
+                SpanishGameMenu.
+            }
+        }
     }
 
     @Override

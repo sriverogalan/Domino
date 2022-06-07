@@ -40,7 +40,7 @@ public class Player {
         return hand.isEmpty();
     }
     public void displayHand() {
-        int counter = 0;
+        int counter = 1;
         for (Card card : hand) {
             System.out.print(counter++ + ". " + card.toString()+ " ");
         }
