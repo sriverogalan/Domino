@@ -16,7 +16,6 @@ public class Card {
         x = y;
         y = temp;
     }
-
     @Override
     public String toString() {
         return "[ " + x + " / " + y + " ]";
