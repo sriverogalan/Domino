@@ -1,4 +1,9 @@
 package games.tapadito;
 
-public class InternationalBlockGame {
+import games.DominoGame;
+
+public class InternationalBlockGame extends DominoGame {
+
+
+
 }
