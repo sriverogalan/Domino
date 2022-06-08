@@ -58,8 +58,7 @@ public class Text {
     public static void chooseWhatYouWantToDoInternationalBlockGame(Player player) {
         System.out.println(player.getColor() + "¿Qué quieres hacer " + player.getName() + "?");
         System.out.println("1. Tirar una carta");
-        System.out.println("2. Coger una carta");
-        System.out.println("3. Pasar turno");
+        System.out.println("2. Pasar turno");
     }
 
 
