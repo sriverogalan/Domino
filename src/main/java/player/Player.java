@@ -13,12 +13,10 @@ public class Player {
     private String color;
     @Getter public List<Card> hand = new ArrayList<>();
     private int points = 0;
-    @Getter public boolean isBOT;
 
-    public Player(String name, String color, boolean isBOT) {
+    public Player(String name, String color ) {
         this.name = name;
         this.color = color;
-        this.isBOT = isBOT;
     }
 
     public void addCard(Card card) {
@@ -34,6 +32,12 @@ public class Player {
         int counter = 1;
         for (Card card : hand) {
             System.out.print(counter++ + ". " + card.toString()+ " ");
+            System.out.println();
         }
     }
+    @Override
+    public String toString() {
+        return "Player " + id + " " + name ;
+    }
+
 }
