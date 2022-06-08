@@ -2,6 +2,7 @@ package utils;
 
 import card.Card;
 import lombok.experimental.UtilityClass;
+import player.Player;
 
 @UtilityClass
 public class Text {
@@ -50,7 +51,7 @@ public class Text {
     }
 
     public static void playCard() {
-        System.out.println("¿Qué carta quieres tirar?");
+        System.out.println("¿Qué carta quieres tirar   ?");
     }
 
 }

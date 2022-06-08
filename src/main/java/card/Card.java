@@ -11,6 +11,12 @@ public class Card {
         this.x = x;
         this.y = y;
     }
+    public void rotate() {
+        int temp = x;
+        x = y;
+        y = temp;
+    }
+
     @Override
     public String toString() {
         return "[ " + x + " / " + y + " ]";

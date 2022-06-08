@@ -34,6 +34,12 @@ public class Player {
         int counter = 1;
         for (Card card : hand) {
             System.out.print(counter++ + ". " + card.toString()+ " ");
+            System.out.println();
         }
     }
+    @Override
+    public String toString() {
+        return "Player " + id + " " + name ;
+    }
+
 }
