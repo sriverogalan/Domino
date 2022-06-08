@@ -1,8 +1,9 @@
 package menu;
 
 
-import games.international.InternationalDrawMenu;
-import games.tapadito.InternationalBlockMenu;
+import games.international.draw.InternationalDrawGame;
+import games.international.draw.InternationalDrawMenu;
+import games.international.block.InternationalBlockMenu;
 import player.PlayerManager;
 import utils.*;
 
@@ -34,7 +35,6 @@ public class MainMenu {
         playAgain();
     }
     public static void playAgain() {
-        PlayerManager.clearPlayers();
         Text.doYouPlayAgain();
         switch (scanner.nextInt()) {
             case 1 -> election();

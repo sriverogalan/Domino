@@ -1,6 +1,5 @@
-package games.tapadito;
+package games.international.block;
 
-import card.Card;
 import games.DominoMenu;
 import player.Player;
 import player.PlayerManager;
@@ -12,10 +11,11 @@ public class InternationalBlockMenu extends DominoMenu {
     private static final InternationalBlockGame game = new InternationalBlockGame();
 
     public static void start() {
+        Text.separator();
         Text.startInternationalBlockGame();
         PlayerManager.addPlayer(new Player(scanner.next(), Colors.getRandomColor()));
         choosePlayersMode();
-
+        game.start();
     }
 
     public static void chooseWhatYouWantToDo(Player player) {

@@ -1,4 +1,4 @@
-package games.international;
+package games.international.draw;
 
 import card.Card;
 import games.DominoMenu;
