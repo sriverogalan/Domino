@@ -1,9 +1,7 @@
 package utils;
-
 import card.Card;
 import lombok.experimental.UtilityClass;
 import player.Player;
-
 @UtilityClass
 public class Text {
     public static void separator() {
@@ -17,13 +15,11 @@ public class Text {
         System.out.println("2. Internacional Sin Robar (Block)");
         System.out.println("3. Tapadito");
     }
-
     public static void doYouPlayAgain() {
         System.out.println("¿Quieres jugar otra vez? \n" +
                 "1. Si\n" +
                 "2. No\n");
     }
-
     public static void playerName(int num) {
         System.out.println("¿Como quieres que te llamemos Jugador " + num + " ?");
     }

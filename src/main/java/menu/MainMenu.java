@@ -1,7 +1,7 @@
 package menu;
 
 
-import games.international.InternationalMenu;
+import games.international.InternationalDrawMenu;
 import utils.*;
 
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class MainMenu {
         Text.start();
         switch (scanner.nextInt()) {
             case 1 -> {
-                InternationalMenu.start();
+                InternationalDrawMenu.start();
             }
         }
         Text.doYouPlayAgain();

@@ -8,9 +8,9 @@ import utils.Text;
 
 import java.util.*;
 
-public class InternationalMenu {
+public class InternationalDrawMenu {
     private static final Scanner scanner = new Scanner(System.in);
-    private static final InternationalGame game = new InternationalGame();
+    private static final InternationalDrawGame game = new InternationalDrawGame();
     private static boolean isFirstPutBoard = true;
     public static void start() {
         Text.startInternationalGame();
