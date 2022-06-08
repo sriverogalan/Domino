@@ -6,6 +6,13 @@ import player.Player;
 
 @UtilityClass
 public class Text {
+    //separator
+    public static void separator() {
+        System.out.println(" ");
+        System.out.println(Colors.RESET + "-----------------------------------------------------");
+        System.out.println(" ");
+    }
+
     public static void principal() {
         System.out.println("Bienvenido al domino, introduce el número para elegir las reglas que quiere: ");
         System.out.println("1. Internacional ");
@@ -24,8 +31,8 @@ public class Text {
     }
 
     // chooseWhatYouWantToDo
-    public static void chooseWhatYouWantToDo() {
-        System.out.println("¿Qué quieres hacer?");
+    public static void chooseWhatYouWantToDo(Player player) {
+        System.out.println(player.getColor() + "¿Qué quieres hacer " + player.getName() + "?");
         System.out.println("1. Tirar una carta");
         System.out.println("2. Coger una carta");
     }
@@ -33,10 +40,15 @@ public class Text {
     public static void wrongInput() {
         System.out.println(Colors.RED + "¡Error! Introduce un número válido" + Colors.RESET);
     }
+
     public static void chooseLeftOrRight(Card card) {
         System.out.println("¿A dónde quieres tirar la carta en el tablero " + card.toString() + "?");
         System.out.println("1. A la izquierda");
-        System.out.println("2. A la derecha");
+        System.out.println("2. A la derecha" + Colors.RESET);
+    }
+
+    public static void errorNumberNotValid() {
+        System.out.println("ERROR : Número no válido");
     }
 
 
@@ -45,13 +57,13 @@ public class Text {
         System.out.println("1. Uno contra uno");
         System.out.println("2. Uno contra dos ");
         System.out.println("3. Uno contra tres");
-        System.out.println("4. Uno contra uno (BOT)");
-        System.out.println("5. Uno contra dos (BOTS)");
-        System.out.println("6. Uno contra tres (BOTS)");
     }
 
-    public static void playCard() {
-        System.out.println("¿Qué carta quieres tirar   ?");
+    public static void playCard(Player player) {
+        System.out.println("¿Qué carta quieres tirar " + player.getName() + " ?");
     }
 
+    public void winner(Player player) {
+        System.out.println("El ganador es " + player.getName() + " gracias por jugar al domino internacional :) ");
+    }
 }

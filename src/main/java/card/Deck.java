@@ -8,11 +8,11 @@ import java.util.*;
 @Getter
 @Setter
 public class Deck {
-    private List<Card> cards = new ArrayList<>();
+    public List<Card> cards = new ArrayList<>();
     public Deck() {
         int counter = 0;
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 6; j++) {
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
                 if (j >= counter){
                     cards.add(new Card(i, j));
                 }
@@ -21,7 +21,4 @@ public class Deck {
         }
         Collections.shuffle(cards);
     }
-
-
-
 }
