@@ -1,5 +1,6 @@
 package games;
 
+import card.Card;
 import player.Player;
 import player.PlayerManager;
 import utils.Colors;
@@ -27,6 +28,9 @@ public class DominoMenu {
             PlayerManager.addPlayer(new Player(scanner.next(), Colors.getRandomColor()));
         }
     }
-
+    public static Card chooseCard(Player player) {
+        Text.playCard(player);
+        return player.getHand().get(scanner.nextInt()-1);
+    }
 
 }

@@ -8,8 +8,8 @@ import player.PlayerManager;
 import utils.Text;
 
 public class InternationalBlockGame extends InternationalGame {
-
     public void start() {
+        PlayerManager.assignHandPlayer(deckCards);
         while (!isWin) {
             for (Player player : PlayerManager.getPlayers()){
                 InternationalBlockMenu.chooseWhatYouWantToDo(player);
@@ -22,7 +22,4 @@ public class InternationalBlockGame extends InternationalGame {
             }
         }
     }
-
-
-
 }

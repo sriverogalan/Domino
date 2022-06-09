@@ -9,7 +9,6 @@ import utils.Text;
 
 public class InternationalBlockMenu extends DominoMenu {
     private static final InternationalBlockGame game = new InternationalBlockGame();
-
     private static boolean isFirstPutBoard = true;
     public static void start() {
         Text.separator();
@@ -18,7 +17,6 @@ public class InternationalBlockMenu extends DominoMenu {
         choosePlayersMode();
         game.start();
     }
-
     public static void chooseWhatYouWantToDo(Player player) {
         Text.separator();
         game.printBoard();
@@ -35,8 +33,7 @@ public class InternationalBlockMenu extends DominoMenu {
     }
 
     public static void playCard(Player player) {
-        Text.playCard(player);
-        Card card = player.getHand().get(scanner.nextInt()-1);
+        Card card = chooseCard(player);
         if (isFirstPutBoard){
             game.firstPutBoard(player, card);
             isFirstPutBoard = false;
@@ -52,7 +49,4 @@ public class InternationalBlockMenu extends DominoMenu {
             }
         }
     }
-
-
-
 }

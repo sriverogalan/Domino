@@ -24,9 +24,7 @@ public class InternationalDrawMenu extends DominoMenu {
         Text.chooseWhatYouWantToDoInternationalDrawGame(player);
         switch (scanner.nextInt()) {
             case 1 -> playCard(player);
-            case 2 -> {
-                game.putCardToHand(player);
-            }
+            case 2 -> game.putCardToHand(player);
             default -> {
                 Text.wrongInput();
                 chooseWhatYouWantToDo(player);
@@ -34,8 +32,7 @@ public class InternationalDrawMenu extends DominoMenu {
         }
     }
     public static void playCard(Player player) {
-        Text.playCard(player);
-        Card card = player.getHand().get(scanner.nextInt()-1);
+        Card card = chooseCard(player);
         if (isFirstPutBoard){
             game.firstPutBoard(player, card);
             isFirstPutBoard = false;

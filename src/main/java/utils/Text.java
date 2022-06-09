@@ -11,7 +11,7 @@ public class Text {
 
     // step
     public static void step(Player player) {
-        System.out.println("\n\n" + player.getName() + " Ha decidido pasar su turno \n\n");
+        System.out.println("\n\n" + player.toString() + " Ha decidido pasar su turno \n\n");
     }
 
     public static void separator() {
@@ -26,10 +26,7 @@ public class Text {
         System.out.println("3. Tapadito");
     }
     public static void doYouPlayAgain() {
-        System.out.println("¿Quieres jugar otra vez? \n" +
-                "1. Si\n" +
-                "2. No\n");
-    }
+        System.out.println("¿Quieres jugar otra vez? (1 = Si / 2 = No");}
     public static void playerName(int num) {
         System.out.println("¿Como quieres que te llamemos Jugador " + num + " ?");
     }
@@ -76,7 +73,7 @@ public class Text {
         System.out.println("2. A la derecha" + Colors.RESET);
     }
     public static void errorNumberNotValid() {
-        System.out.println("ERROR : Número no válido");
+        System.out.println(Colors.RED + "ERROR : Número no válido"+ Colors.RESET);
     }
     public static void chooseRivals() {
         System.out.println("¿Contra cuántos jugadores quieres competir?");
@@ -85,10 +82,10 @@ public class Text {
         System.out.println("3. Uno contra tres");
     }
     public static void playCard(Player player) {
-        System.out.println("¿Qué carta quieres tirar " + player.getName() + " ?");
+        System.out.println("¿Qué carta quieres tirar " + player.toString() + " ?");
     }
     public void winner(Player player) {
-        System.out.println("El ganador es " + player.getName() + " gracias por jugar al domino internacional :) ");
+        System.out.println("El ganador es " + player.toString() + " gracias por jugar al domino internacional :) ");
     }
 
 }
