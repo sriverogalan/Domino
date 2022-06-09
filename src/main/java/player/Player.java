@@ -12,8 +12,6 @@ public class Player {
     private String name;
     private String color;
     @Getter public List<Card> hand = new ArrayList<>();
-    private int points = 0;
-
     public Player(String name, String color ) {
         this.name = name;
         this.color = color;
@@ -34,7 +32,7 @@ public class Player {
     }
     @Override
     public String toString() {
-        return "Player " + id + " " + name ;
+        return "Player " + id + ": " + name + " ";
     }
 
 }

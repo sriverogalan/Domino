@@ -27,4 +27,8 @@ public class PlayerManager {
             System.out.println();
         }
     }
+
+    public static void clearPlayers() {
+        players.clear();
+    }
 }
