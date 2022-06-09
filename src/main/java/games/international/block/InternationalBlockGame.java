@@ -1,12 +1,13 @@
 package games.international.block;
 
 import games.DominoGame;
+import games.international.InternationalGame;
 import games.international.draw.InternationalDrawMenu;
 import player.Player;
 import player.PlayerManager;
 import utils.Text;
 
-public class InternationalBlockGame extends DominoGame {
+public class InternationalBlockGame extends InternationalGame {
 
     public void start() {
         while (!isWin) {

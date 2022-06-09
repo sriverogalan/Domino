@@ -9,6 +9,11 @@ public class Text {
         System.out.println("\n\n Bienvenido al juego de domino \n\n");
     }
 
+    // step
+    public static void step(Player player) {
+        System.out.println("\n\n" + player.getName() + " Ha decidido pasar su turno \n\n");
+    }
+
     public static void separator() {
         System.out.println(" ");
         System.out.println(Colors.RESET + "-----------------------------------------------------");
@@ -85,4 +90,5 @@ public class Text {
     public void winner(Player player) {
         System.out.println("El ganador es " + player.getName() + " gracias por jugar al domino internacional :) ");
     }
+
 }

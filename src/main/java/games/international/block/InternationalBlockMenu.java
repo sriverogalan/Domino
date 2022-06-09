@@ -10,6 +10,7 @@ import utils.Text;
 public class InternationalBlockMenu extends DominoMenu {
     private static final InternationalBlockGame game = new InternationalBlockGame();
 
+    private static boolean isFirstPutBoard = true;
     public static void start() {
         Text.separator();
         Text.startInternationalBlockGame();
@@ -25,6 +26,7 @@ public class InternationalBlockMenu extends DominoMenu {
         Text.chooseWhatYouWantToDoInternationalBlockGame(player);
         switch (scanner.nextInt()) {
             case 1 -> playCard(player);
+            case 2 -> Text.step(player);
             default -> {
                 Text.wrongInput();
                 chooseWhatYouWantToDo(player);
@@ -50,6 +52,7 @@ public class InternationalBlockMenu extends DominoMenu {
             }
         }
     }
+
 
 
 }
