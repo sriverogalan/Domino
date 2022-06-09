@@ -16,7 +16,6 @@ public class Player {
         this.name = name;
         this.color = color;
     }
-
     public void addCard(Card card) {
         hand.add(card);
     }
@@ -27,6 +26,13 @@ public class Player {
         int counter = 1;
         for (Card card : hand) {
             System.out.print(counter++ + ". " + card.toString()+ " ");
+            System.out.println();
+        }
+    }
+    public void displayHandClosed(){
+        int counter = 1;
+        for (Card card : hand) {
+            System.out.print(counter++ + ". [ ? / ? ] ");
             System.out.println();
         }
     }

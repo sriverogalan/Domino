@@ -1,4 +1,4 @@
-package games.international.block;
+package games.international_games.draw;
 
 import card.Card;
 import games.DominoMenu;
@@ -7,12 +7,12 @@ import player.PlayerManager;
 import utils.Colors;
 import utils.Text;
 
-public class InternationalBlockMenu extends DominoMenu {
-    private static final InternationalBlockGame game = new InternationalBlockGame();
+public class InternationalDrawMenu extends DominoMenu {
+    private static final InternationalDrawGame game = new InternationalDrawGame();
     private static boolean isFirstPutBoard = true;
     public static void start() {
         Text.separator();
-        Text.startInternationalBlockGame();
+        Text.startInternationalGame();
         PlayerManager.addPlayer(new Player(scanner.next(), Colors.getRandomColor()));
         choosePlayersMode();
         game.start();
@@ -21,17 +21,16 @@ public class InternationalBlockMenu extends DominoMenu {
         Text.separator();
         game.printBoard();
         player.displayHand();
-        Text.chooseWhatYouWantToDoInternationalBlockGame(player);
+        Text.chooseWhatYouWantToDoInternationalDrawGame(player);
         switch (scanner.nextInt()) {
             case 1 -> playCard(player);
-            case 2 -> Text.step(player);
+            case 2 -> game.putCardToHand(player);
             default -> {
                 Text.wrongInput();
                 chooseWhatYouWantToDo(player);
             }
         }
     }
-
     public static void playCard(Player player) {
         Card card = chooseCard(player);
         if (isFirstPutBoard){

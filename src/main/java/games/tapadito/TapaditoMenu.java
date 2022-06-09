@@ -1,26 +1,24 @@
-package games.international.draw;
+package games.tapadito;
 
-import card.Card;
 import games.DominoMenu;
 import player.Player;
 import player.PlayerManager;
 import utils.Colors;
 import utils.Text;
 
-public class InternationalDrawMenu extends DominoMenu {
-    private static final InternationalDrawGame game = new InternationalDrawGame();
-    private static boolean isFirstPutBoard = true;
+public class TapaditoMenu extends DominoMenu {
+    private static final TapaditoGame game = new TapaditoGame();
     public static void start() {
         Text.separator();
         Text.startInternationalGame();
         PlayerManager.addPlayer(new Player(scanner.next(), Colors.getRandomColor()));
         choosePlayersMode();
         game.start();
-    }
+    }/*
     public static void chooseWhatYouWantToDo(Player player) {
         Text.separator();
         game.printBoard();
-        player.displayHand();
+        player.displayHandClosed();
         Text.chooseWhatYouWantToDoInternationalDrawGame(player);
         switch (scanner.nextInt()) {
             case 1 -> playCard(player);
@@ -41,6 +39,7 @@ public class InternationalDrawMenu extends DominoMenu {
             switch (scanner.nextInt()) {
                 case 1 -> game.putCardLeft(player, card);
                 case 2 -> game.putCardRight(player, card);
+                case 3 -->
                 default -> {
                     Text.wrongInput();
                     chooseWhatYouWantToDo(player);
@@ -48,4 +47,9 @@ public class InternationalDrawMenu extends DominoMenu {
             }
         }
     }
+
+    public static void chooseAgain(Player player) {
+    }
+*/
+
 }

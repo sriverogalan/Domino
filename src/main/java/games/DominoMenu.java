@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class DominoMenu {
     public static final Scanner scanner = new Scanner(System.in);
+
     public static void choosePlayersMode() {
         Text.chooseRivals();
         switch (scanner.nextInt()) {
@@ -22,15 +23,22 @@ public class DominoMenu {
             }
         }
     }
+
     public static void generatePlayers(int numPlayers) {
         for (int i = 1; i <= numPlayers; i++) {
             Text.playerName(i + 1);
             PlayerManager.addPlayer(new Player(scanner.next(), Colors.getRandomColor()));
         }
     }
+
     public static Card chooseCard(Player player) {
         Text.playCard(player);
-        return player.getHand().get(scanner.nextInt()-1);
+        int cardIndex = scanner.nextInt();
+        if (cardIndex > player.getHand().size() || cardIndex <= 1) {
+            Text.errorNumberNotValid();
+            chooseCard(player);
+        }
+        return player.getHand().get(cardIndex - 1);
     }
 
 }

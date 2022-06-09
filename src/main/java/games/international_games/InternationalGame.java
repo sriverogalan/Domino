@@ -1,9 +1,10 @@
-package games.international;
+package games.international_games;
 
 import card.Card;
 import games.DominoGame;
-import games.international.draw.InternationalDrawMenu;
+import games.international_games.draw.InternationalDrawMenu;
 import player.Player;
+import utils.Text;
 
 public class InternationalGame extends DominoGame {
     public InternationalGame() {
@@ -20,7 +21,7 @@ public class InternationalGame extends DominoGame {
                 board.add(0, card);
                 player.getHand().remove(card);
             } else {
-                System.out.println("ERROR : No se puede poner la carta");
+                Text.errorNotPutHereInternational();
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);
             }
         }
@@ -35,10 +36,9 @@ public class InternationalGame extends DominoGame {
                 board.add(card);
                 player.getHand().remove(card);
             } else {
-                System.out.println("ERROR : No se puede poner la carta");
+                Text.errorNotPutHereInternational();
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);
             }
         }
     }
-
 }

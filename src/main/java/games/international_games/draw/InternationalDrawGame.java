@@ -1,15 +1,13 @@
-package games.international.draw;
+package games.international_games.draw;
 
-import card.Card;
-import games.DominoGame;
-import games.international.InternationalGame;
+import games.international_games.InternationalGame;
 import player.Player;
 import player.PlayerManager;
 import utils.Text;
 
 public class InternationalDrawGame extends InternationalGame {
     public void start() {
-        PlayerManager.assignHandPlayer(deckCards);
+        PlayerManager.assignHandPlayerDraw(deckCards);
         while (!isWin) {
             for (Player player : PlayerManager.getPlayers()) {
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);
