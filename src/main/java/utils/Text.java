@@ -79,9 +79,15 @@ public class Text {
         System.out.println("3. Uno contra tres");
     }
     public static void playCard(Player player) {
-        System.out.println(player.getColor() + "¿Qué carta quieres tirar " + player.toString() + " ?");
+        System.out.println(player.getColor() + "¿Qué carta quieres tirar " + player.getName()+ " ?");
     }
-    public void winner(Player player) {
-        System.out.println("El ganador es " + player.toString() + " gracias por jugar al domino internacional :) ");
+    public void winnerDraw(Player player) {
+        System.out.println("El ganador es " + player.toString() + " gracias por jugar al domino Internacional Draw :) ");
+    }
+    public void winnerBlock(Player player) {
+        System.out.println("El ganador es " + player.toString() + " gracias por jugar al domino Internacional Draw :) ");
+    }
+    public void winnerTapadito(Player player) {
+        System.out.println("El ganador es " + player.toString() + " gracias por jugar al domino Tapadito:) ");
     }
 }

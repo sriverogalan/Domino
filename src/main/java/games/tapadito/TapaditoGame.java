@@ -1,11 +1,9 @@
 package games.tapadito;
-
 import card.Card;
 import games.DominoGame;
 import player.Player;
 import player.PlayerManager;
 import utils.Text;
-
 public class TapaditoGame extends DominoGame {
     public void start() {
         PlayerManager.putTheNecessaryCardsInThePlayerHand(deckCards);
@@ -14,7 +12,7 @@ public class TapaditoGame extends DominoGame {
                 TapaditoMenu.chooseWhatYouWantToDo(player);
                 if (player.isEmptyHand()) {
                     isWin = true;
-                    Text.winner(player);
+                    Text.winnerTapadito(player);
                     reset();
                     break;
                 }
@@ -31,8 +29,7 @@ public class TapaditoGame extends DominoGame {
                 board.add(0, card);
                 player.getHand().remove(card);
             } else {
-                Text.errorNotPutHere();
-                TapaditoMenu.choosePlayCard(player, card);
+                errorNotPutHere(player, card);
             }
         }
     }
@@ -46,9 +43,12 @@ public class TapaditoGame extends DominoGame {
                 board.add(card);
                 player.getHand().remove(card);
             } else {
+                errorNotPutHere(player, card);
             }
         }
     }
-
-
+    public void errorNotPutHere(Player player, Card card) {
+        Text.errorNotPutHere();
+        TapaditoMenu.choosePlayCard(player, card);
+    }
 }

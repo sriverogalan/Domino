@@ -13,7 +13,7 @@ public class InternationalBlockGame extends InternationalGame {
                 InternationalBlockMenu.chooseWhatYouWantToDo(player);
                 if (player.isEmptyHand()) {
                     isWin = true;
-                    Text.winner(player);
+                    Text.winnerBlock(player);
                     reset();
                     break;
                 }

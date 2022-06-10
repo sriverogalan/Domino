@@ -13,7 +13,7 @@ public class InternationalDrawGame extends InternationalGame {
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);
                 if (player.isEmptyHand()) {
                     isWin = true;
-                    Text.winner(player);
+                    Text.winnerDraw(player);
                     reset();
                     break;
                 }
