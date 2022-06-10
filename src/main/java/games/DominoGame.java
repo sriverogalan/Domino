@@ -5,6 +5,7 @@ import card.Deck;
 import lombok.Getter;
 import player.Player;
 import player.PlayerManager;
+import utils.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class DominoGame {
     @Getter
     public List<Card> deckCards = deck.getCards();
     public List<Card> board = new ArrayList<>();
+
     public void firstPutBoard(Player player, Card card) {
         if (board.size() == 0) {
             board.add(card);
@@ -35,5 +37,8 @@ public class DominoGame {
         deckCards.clear();
         deck.createCards();
     }
+
+
+
 
 }

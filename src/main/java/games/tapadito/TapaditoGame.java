@@ -1,15 +1,24 @@
-package games.international;
-
+package games.tapadito;
 import card.Card;
 import games.DominoGame;
-import games.international.draw.InternationalDrawMenu;
 import player.Player;
-
-public class InternationalGame extends DominoGame {
-    public InternationalGame() {
-        super();
+import player.PlayerManager;
+import utils.Text;
+public class TapaditoGame extends DominoGame {
+    public void start() {
+        PlayerManager.putTheNecessaryCardsInThePlayerHand(deckCards);
+        while (!isWin) {
+            for (Player player : PlayerManager.getPlayers()) {
+                TapaditoMenu.chooseWhatYouWantToDo(player);
+                if (player.isEmptyHand()) {
+                    isWin = true;
+                    Text.winnerTapadito(player);
+                    reset();
+                    break;
+                }
+            }
+        }
     }
-
     public void putCardLeft(Player player, Card card) {
         if (card.getY() == board.get(0).getX()) {
             board.add(0, card);
@@ -20,8 +29,7 @@ public class InternationalGame extends DominoGame {
                 board.add(0, card);
                 player.getHand().remove(card);
             } else {
-                System.out.println("ERROR : No se puede poner la carta");
-                InternationalDrawMenu.chooseWhatYouWantToDo(player);
+                errorNotPutHere(player, card);
             }
         }
     }
@@ -35,10 +43,12 @@ public class InternationalGame extends DominoGame {
                 board.add(card);
                 player.getHand().remove(card);
             } else {
-                System.out.println("ERROR : No se puede poner la carta");
-                InternationalDrawMenu.chooseWhatYouWantToDo(player);
+                errorNotPutHere(player, card);
             }
         }
     }
-
+    public void errorNotPutHere(Player player, Card card) {
+        Text.errorNotPutHere();
+        TapaditoMenu.choosePlayCard(player, card);
+    }
 }

@@ -18,16 +18,18 @@ public class PlayerManager {
         player.setId(players.size() + 1);
         players.add(player);
     }
-    public static void assignHandPlayer(List<Card> cards) {
+    public static void putDominoClassicCardsInThePlayerHand(List<Card> cards) {
+        assignCardsPlayer(cards, 7);
+    }
+    public static void putTheNecessaryCardsInThePlayerHand(List<Card> cards) {assignCardsPlayer(cards, cards.size()/players.size());}
+    public static void assignCardsPlayer(List<Card> cards, int index) {
         for (Player player : players) {
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < index; i++) {
                 player.addCard(cards.get(0));
                 cards.remove(0);
             }
-            System.out.println();
         }
     }
-
     public static void clearPlayers() {
         players.clear();
     }

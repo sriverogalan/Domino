@@ -1,21 +1,19 @@
-package games.international.block;
+package games.international_games.block;
 
-import games.DominoGame;
-import games.international.InternationalGame;
-import games.international.draw.InternationalDrawMenu;
+import games.international_games.InternationalGame;
 import player.Player;
 import player.PlayerManager;
 import utils.Text;
 
 public class InternationalBlockGame extends InternationalGame {
     public void start() {
-        PlayerManager.assignHandPlayer(deckCards);
+        PlayerManager.putTheNecessaryCardsInThePlayerHand(deckCards);
         while (!isWin) {
             for (Player player : PlayerManager.getPlayers()){
                 InternationalBlockMenu.chooseWhatYouWantToDo(player);
                 if (player.isEmptyHand()) {
                     isWin = true;
-                    Text.winner(player);
+                    Text.winnerBlock(player);
                     reset();
                     break;
                 }

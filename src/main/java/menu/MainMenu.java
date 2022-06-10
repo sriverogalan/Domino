@@ -1,10 +1,9 @@
 package menu;
 
 
-import games.international.draw.InternationalDrawGame;
-import games.international.draw.InternationalDrawMenu;
-import games.international.block.InternationalBlockMenu;
-import player.PlayerManager;
+import games.international_games.draw.InternationalDrawMenu;
+import games.international_games.block.InternationalBlockMenu;
+import games.tapadito.TapaditoMenu;
 import utils.*;
 
 import java.util.Scanner;
@@ -21,12 +20,9 @@ public class MainMenu {
         Text.separator();
         Text.start();
         switch (scanner.nextInt()) {
-            case 1 -> {
-                InternationalDrawMenu.start();
-            }
-            case 2 -> {
-                InternationalBlockMenu.start();
-            }
+            case 1 -> InternationalDrawMenu.start();
+            case 2 -> InternationalBlockMenu.start();
+            case 3 -> TapaditoMenu.start();
             default -> {
                 Text.errorNumberNotValid();
                 election();
