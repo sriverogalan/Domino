@@ -7,7 +7,7 @@ import utils.Text;
 
 public class InternationalBlockGame extends InternationalGame {
     public void start() {
-        PlayerManager.assignHandPlayerBlock(deckCards);
+        PlayerManager.putTheNecessaryCardsInThePlayerHand(deckCards);
         while (!isWin) {
             for (Player player : PlayerManager.getPlayers()){
                 InternationalBlockMenu.chooseWhatYouWantToDo(player);

@@ -31,7 +31,6 @@ public class InternationalBlockMenu extends DominoMenu {
             }
         }
     }
-
     public static void playCard(Player player) {
         Card card = chooseCard(player);
         if (isFirstPutBoard){

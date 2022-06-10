@@ -34,7 +34,7 @@ public class DominoMenu {
     public static Card chooseCard(Player player) {
         Text.playCard(player);
         int cardIndex = scanner.nextInt();
-        if (cardIndex > player.getHand().size() || cardIndex <= 1) {
+        if (cardIndex > player.getHand().size() || cardIndex < 1) {
             Text.errorNumberNotValid();
             chooseCard(player);
         }

@@ -34,7 +34,7 @@ public class Text {
         System.out.println("3. Gana el jugador que se quede sin fichas en la mano.\n");
         System.out.println("\n\n¿Como quieres que te llamemos Jugador 1 ?");
     }
-    public static void errorNotPutHereInternational(){
+    public static void errorNotPutHere(){
         System.out.println(Colors.RED + "ERROR: No se puede poner la carta aquí"+ Colors.RESET);
     }
     public static void startInternationalBlockGame(){
@@ -62,6 +62,12 @@ public class Text {
         System.out.println("¿A dónde quieres tirar la carta en el tablero " + card.toString() + "?");
         System.out.println("1. A la izquierda");
         System.out.println("2. A la derecha" + Colors.RESET);
+    }
+    public static void chooseCardTapaditoOption(Card card) {
+        System.out.println(Colors.RESET +"¿A dónde quieres tirar la carta en el tablero, la ficha es: " + card.toString() + "?");
+        System.out.println("1. A la izquierda");
+        System.out.println("2. A la derecha" );
+        System.out.println("3. No puedo tirar, paso el turno");
     }
     public static void errorNumberNotValid() {
         System.out.println(Colors.RED + "ERROR : Número no válido"+ Colors.RESET);

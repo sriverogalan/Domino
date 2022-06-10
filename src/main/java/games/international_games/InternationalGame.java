@@ -21,7 +21,7 @@ public class InternationalGame extends DominoGame {
                 board.add(0, card);
                 player.getHand().remove(card);
             } else {
-                Text.errorNotPutHereInternational();
+                Text.errorNotPutHere();
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);
             }
         }
@@ -36,7 +36,7 @@ public class InternationalGame extends DominoGame {
                 board.add(card);
                 player.getHand().remove(card);
             } else {
-                Text.errorNotPutHereInternational();
+                Text.errorNotPutHere();
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);
             }
         }

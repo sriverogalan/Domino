@@ -7,7 +7,7 @@ import utils.Text;
 
 public class InternationalDrawGame extends InternationalGame {
     public void start() {
-        PlayerManager.assignHandPlayerDraw(deckCards);
+        PlayerManager.putDominoClassicCardsInThePlayerHand(deckCards);
         while (!isWin) {
             for (Player player : PlayerManager.getPlayers()) {
                 InternationalDrawMenu.chooseWhatYouWantToDo(player);

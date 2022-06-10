@@ -8,10 +8,10 @@ import utils.Text;
 
 public class TapaditoGame extends DominoGame {
     public void start() {
-        PlayerManager.assignHandPlayerDraw(deckCards);
+        PlayerManager.putTheNecessaryCardsInThePlayerHand(deckCards);
         while (!isWin) {
             for (Player player : PlayerManager.getPlayers()) {
-               //  TapaditoMenu.chooseWhatYouWantToDo(player);
+                TapaditoMenu.chooseWhatYouWantToDo(player);
                 if (player.isEmptyHand()) {
                     isWin = true;
                     Text.winner(player);
@@ -31,7 +31,8 @@ public class TapaditoGame extends DominoGame {
                 board.add(0, card);
                 player.getHand().remove(card);
             } else {
-                System.out.println("ERROR : No se puede poner la carta");
+                Text.errorNotPutHere();
+                TapaditoMenu.choosePlayCard(player, card);
             }
         }
     }
