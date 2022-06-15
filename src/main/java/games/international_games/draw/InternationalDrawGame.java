@@ -1,10 +1,8 @@
 package games.international_games.draw;
-
 import games.international_games.InternationalGame;
 import player.Player;
 import player.PlayerManager;
 import utils.Text;
-
 public class InternationalDrawGame extends InternationalGame {
     public void start() {
         PlayerManager.putDominoClassicCardsInThePlayerHand(deckCards);
@@ -29,5 +27,4 @@ public class InternationalDrawGame extends InternationalGame {
             System.out.println("No hay fichas para poder coger");
         }
     }
-
 }

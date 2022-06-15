@@ -5,7 +5,6 @@ import player.PlayerManager;
 import utils.Colors;
 import utils.Text;
 import java.util.Scanner;
-
 public class DominoMenu {
     public static final Scanner scanner = new Scanner(System.in);
     public static void choosePlayersMode() {

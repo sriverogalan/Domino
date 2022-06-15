@@ -1,13 +1,9 @@
 package menu;
-
-
 import games.international_games.draw.InternationalDrawMenu;
 import games.international_games.block.InternationalBlockMenu;
 import games.tapadito.TapaditoMenu;
 import utils.*;
-
 import java.util.Scanner;
-
 public class MainMenu {
     private static final Scanner scanner = new Scanner(System.in);
     public static void start() {
