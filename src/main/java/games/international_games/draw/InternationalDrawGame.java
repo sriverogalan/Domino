@@ -14,11 +14,11 @@ public class InternationalDrawGame extends InternationalGame {
                 if (player.isEmptyHand()) {
                     isWin = true;
                     Text.winnerDraw(player);
-                    reset();
                     break;
                 }
             }
         }
+        reset();
     }
     public void putCardToHand(Player player) {
         if (deckCards.size() > 0) {

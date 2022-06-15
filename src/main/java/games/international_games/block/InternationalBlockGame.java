@@ -14,10 +14,10 @@ public class InternationalBlockGame extends InternationalGame {
                 if (player.isEmptyHand()) {
                     isWin = true;
                     Text.winnerBlock(player);
-                    reset();
                     break;
                 }
             }
         }
+        reset();
     }
 }

@@ -10,7 +10,7 @@ import java.util.*;
 public class Deck {
     public List<Card> cards = new ArrayList<>();
     public Deck() {
-        createCards();
+        this.createCards();
     }
 
     public void createCards() {
