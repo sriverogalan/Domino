@@ -1,11 +1,9 @@
 package games.international_games;
-
 import card.Card;
 import games.DominoGame;
 import games.international_games.draw.InternationalDrawMenu;
 import player.Player;
 import utils.Text;
-
 public class InternationalGame extends DominoGame {
     public InternationalGame() {
         super();
