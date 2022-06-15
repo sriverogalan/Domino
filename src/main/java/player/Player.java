@@ -8,7 +8,6 @@ import java.util.List;
 
 @Getter @Setter
 public class Player {
-    private int id;
     private String name;
     private String color;
     @Getter public List<Card> hand = new ArrayList<>();
@@ -38,7 +37,6 @@ public class Player {
     }
     @Override
     public String toString() {
-        return "Player " + id + ": " + name + " ";
+        return "Player " + name + " ";
     }
-
 }

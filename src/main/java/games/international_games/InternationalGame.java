@@ -10,7 +10,6 @@ public class InternationalGame extends DominoGame {
     public InternationalGame() {
         super();
     }
-
     public void putCardLeft(Player player, Card card) {
         if (card.getY() == board.get(0).getX()) {
             board.add(0, card);

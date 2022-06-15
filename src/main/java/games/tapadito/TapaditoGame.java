@@ -13,11 +13,11 @@ public class TapaditoGame extends DominoGame {
                 if (player.isEmptyHand()) {
                     isWin = true;
                     Text.winnerTapadito(player);
-                    reset();
                     break;
                 }
             }
         }
+        reset();
     }
     public void putCardLeft(Player player, Card card) {
         if (card.getY() == board.get(0).getX()) {

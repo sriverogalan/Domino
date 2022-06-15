@@ -5,8 +5,6 @@ import card.Deck;
 import lombok.Getter;
 import player.Player;
 import player.PlayerManager;
-import utils.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,8 +35,4 @@ public class DominoGame {
         deckCards.clear();
         deck.createCards();
     }
-
-
-
-
 }

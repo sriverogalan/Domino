@@ -10,12 +10,10 @@ import java.util.Scanner;
 
 public class MainMenu {
     private static final Scanner scanner = new Scanner(System.in);
-
     public static void start() {
         Text.startDomino();
         election();
     }
-
     public static void election() {
         Text.separator();
         Text.start();
@@ -32,7 +30,8 @@ public class MainMenu {
     }
     public static void playAgain() {
         Text.doYouPlayAgain();
-        switch (scanner.nextInt()) {
+        int answer = scanner.nextInt();
+        switch (answer) {
             case 1 -> election();
             case 2 -> System.exit(0);
             default -> {
@@ -41,5 +40,4 @@ public class MainMenu {
             }
         }
     }
-
 }
